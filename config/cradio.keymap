@@ -37,7 +37,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-           &ht LWIN Q   &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &CAPSLOCK
+           &ht LWIN Q   &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &kp CAPSLOCK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  O       │
             HRML(A,        R,         S)     &lt 2 T    &kp G          &kp M      &lt 1 N    HRMR(E,         I,        O)
