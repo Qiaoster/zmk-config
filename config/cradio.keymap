@@ -71,7 +71,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &trans   &trans   &trans   &trans         &kp GRAVE  &kp LBRC   &kp RBRC   &kp MINUS   &kp BSLH
+            &trans     &trans   &trans   &trans   &trans         &kp GRAVE  &kp LBKT   &kp RBKT   &kp MINUS   &kp BSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
             &trans   &trans     &trans   &trans   &trans      &trans  &kp LPAR  &kp RPAR  &kp SEMI   &kp APOS
