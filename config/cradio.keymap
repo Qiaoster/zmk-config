@@ -100,7 +100,7 @@
             &trans     &trans     &trans     &trans      &trans         &bt BT_SEL 0     &trans     &kp UP     &trans      &bt BT_CLR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-             &trans     &trans     &trans     &trans     &trans         &bt BT_SEL 2     &kp LEFT     &kp DOWN     &kp RIGHT    &bootloader
+             &trans     &trans     &trans     &trans     &trans         &bt BT_SEL 1     &kp LEFT     &kp DOWN     &kp RIGHT    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &trans       &trans         &kp DEL     &kp CAPSLOCK     &trans     &trans     &trans
