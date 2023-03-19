@@ -27,7 +27,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-           &kp Q   &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &ht LWIN ESC
+           &ht ESC Q   &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &ht C_PP CAPSLOCK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  O       │
         //    &kp A      &kp  R       &kp  S     &kp T    &kp G          &kp M      &kp N    &kp E        &kp I       &kp O
@@ -103,7 +103,7 @@
              &trans     &trans     &trans     &trans     &trans         &bt BT_SEL 1     &kp LEFT     &kp DOWN     &kp RIGHT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &trans       &trans         &kp DEL     &kp CAPSLOCK     &trans     &trans     &trans
+            &trans     &trans     &trans    &trans       &trans         &kp DEL     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
