@@ -21,32 +21,6 @@
         };
     };
 	
-	macros {
-		to_laptop_1: to_laptop_1 {
-			label = "ZM_to_laptop_1";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&bt BT_SEL 1>;
-		};
-		
-		to_laptop_2: to_laptop_2 {
-			label = "ZM_to_laptop_2";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&bt BT_SEL 2>;
-		};
-		
-		to_desktop: to_desktop {
-			label = "ZM_to_desktop";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-				= <&bt BT_SEL 0>;
-		};
-	};
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -123,10 +97,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-            &trans     &trans     &trans     &trans      &trans         &to_desktop     &kp PG_UP     &kp UP     &kp PG_DN      &trans
+            &trans     &trans     &trans     &trans      &trans         &bt BT_SEL 0     &kp PG_UP     &kp UP     &kp PG_DN      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-             &trans     &trans     &trans     &trans     &to_laptop_2         &to_laptop_1     &kp LEFT     &kp DOWN     &kp RIGHT    &trans
+             &trans     &trans     &trans     &trans     &bt BT_SEL 2 &bt BT_SEL 1     &kp LEFT     &kp DOWN     &kp RIGHT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &trans       &trans         &kp DEL     &kp K_VOL_DN     &kp K_PP     &kp K_VOL_UP    &trans
