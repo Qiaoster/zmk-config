@@ -28,7 +28,7 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_press &bt BT_SEL 1 &to 5>
-		}
+		};
 		
 		to_laptop_2: to_laptop_2 {
 			label = "ZM_to_laptop_2";
@@ -36,7 +36,7 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_press &bt BT_SEL 2 &to 5>
-		}
+		};
 		
 		to_desktop: to_desktop {
 			label = "ZM_to_desktop";
@@ -44,8 +44,8 @@
 			#binding-cells = <0>;
 			bindings
 				= <&macro_press &bt BT_SEL 0 &to 0>
-		}
-	}
+		};
+	};
 
     keymap {
         compatible = "zmk,keymap";
