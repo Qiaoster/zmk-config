@@ -27,7 +27,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_press &bt BT_SEL 1 &to 5>;
+				= <&bt BT_SEL 1 &to 5>;
 		};
 		
 		to_laptop_2: to_laptop_2 {
@@ -35,15 +35,15 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_press &bt BT_SEL 2 &to 5>;
+				= <&bt BT_SEL 2 &to 5>;
 		};
 		
 		to_desktop: to_desktop {
 			label = "ZM_to_desktop";
-			compatible = "zmk, behavior-macro";
+			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&macro_press &bt BT_SEL 0 &to 0>;
+				= <&bt BT_SEL 0 &to 0>;
 		};
 	};
 
