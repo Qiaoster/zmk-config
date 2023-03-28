@@ -9,6 +9,13 @@
 #define HRML(k1,k2,k3) &ht LALT k1  &ht LCTRL k2  &ht LSHFT k3
 #define HRMR(k1,k2,k3) &ht RSHFT k1  &ht RCTRL k2  &ht RALT k3
 
+#define DESKTOP 0
+#define LAPTOP 1
+#define NUM 2
+#define SYM 3
+#define FUNC 4
+#define ARROW 5
+
 / {
     behaviors {
         ht: hold_tap {
@@ -25,22 +32,23 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-           &ht ESC Q   &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &ht LWIN CAPSLOCK
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  O       │
-        //    &kp A      &kp  R       &kp  S     &kp T    &kp G          &kp M      &kp N    &kp E        &kp I       &kp O
-            HRML(A,        R,         S)     &lt 2 T    &kp G          &kp M      &lt 1 N    HRMR(E,         I,        O)
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &lt 3 Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &lt 4 FSLH
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &lt 4 TAB   &kp SPACE       &kp BSPC  &ht RWIN ENTER
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+           //&ht ESC Q
+		   &to LAPTOP &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &ht LWIN CAPSLOCK
+           HRML(A,        R,         S)     &lt SYM T    &kp G          &kp M      &lt NUM N    HRMR(E,         I,        O)
+           &lt FUNC Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &lt ARROW FSLH
+                                             &lt ARROW TAB   &kp SPACE       &kp BSPC  &ht RWIN ENTER
             >;
         };
 
+        laptop_layer {
+            bindings = <
+           //&ht ESC Q   
+		   &to default_layer &kp W      &kp E     &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O     &ht CAPSLOCK P
+           HRML(A,        S,         D)     &lt SYM F    &kp G          &kp H      &lt NUM J    HRMR(K,         I,        SEMI)
+           &lt FUNC Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &lt ARROW FSLH
+                                             &lt ARROW TAB   &kp SPACE       &kp BSPC  &ht RWIN ENTER
+            >;
+        };
 
         right_layer {
             bindings = <
