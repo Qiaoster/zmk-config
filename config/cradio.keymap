@@ -58,26 +58,26 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            bindings = <
-           &ht ESC Q &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &ht LWIN CAPSLOCK
-           HRML(A,        R,         S)     &lt SYM T    &kp G          &kp M      &lt NUM N    HRMR(E,         I,        O)
-           &lt FUNC Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &lt ARROW FSLH
-                                             &lt ARROW TAB   &kp SPACE       &kp BSPC  &ht RWIN ENTER
-            >;
-        };
+    bindings = <
+   &ht ESC Q &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y &ht LWIN CAPSLOCK
+   HRML(A,    R,     S) &lt SYM T    &kp G  &kp M  &lt NUM N    HRMR(E,     I,    O)
+   &lt FUNC Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA  &kp DOT    &lt ARROW FSLH
+         &lt ARROW TAB   &kp SPACE   &kp BSPC  &ht RWIN ENTER
+    >;
+    };
 
-        laptop_layer {
-            bindings = <
-           &ht ESC Q   &kp W      &kp E     &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O     &ht CAPSLOCK P
-           HRML(A,        S,         D)     &lt QWERTY_SYM F    &kp G          &kp H      &lt NUM J    HRMR(K,         L,        SEMI)
-           &lt FUNC Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &lt ARROW FSLH
-                                             &lt ARROW TAB   &kp SPACE       &kp BSPC  &ht RWIN ENTER
-            >;
-        };
+    laptop_layer {
+    bindings = <
+   &ht ESC Q   &kp W  &kp E &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O &ht CAPSLOCK P
+   HRML(A,    S,     D) &lt QWERTY_SYM F    &kp G  &kp H  &lt NUM J    HRMR(K,     L,    SEMI)
+   &lt FUNC Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT    &lt ARROW FSLH
+         &lt ARROW TAB   &kp SPACE   &kp BSPC  &ht RWIN ENTER
+    >;
+    };
 
-        num_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+    num_layer {
+    bindings = <
+    //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
              &trans     &kp N7     &kp N8     &kp N9     &trans        &trans   &trans  &trans  &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
