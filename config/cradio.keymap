@@ -116,7 +116,7 @@
         colemak_layer {
     		      bindings = <
    		      &ht ESC Q &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y &ht LWIN CAPSLOCK
-   		      HRML(A,    R,     S) &lt SYM T    &kp G  &kp M  &lt NUM N    HRMR(E,     I,    O)
+   		      HRML(A,    R,     S) &lt COLEMAK_SYM T    &kp G  &kp M  &lt NUM N    HRMR(E,     I,    O)
    		      &lt FUNC Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA  &kp DOT    &lt ARROW FSLH
          	      &lt ARROW TAB   &kp SPACE   &kp BSPC  &ht RWIN ENTER
     		      >;
