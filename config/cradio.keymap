@@ -59,7 +59,7 @@
         compatible = "zmk,keymap";
         default_layer {
     bindings = <
-   &ht RWIN Q &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y &ht CAPSLOCK ESC
+   &ht RWIN Q &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y &ht CAPSLOCK P
    HRML(A,    R,     S) &lt SYM T    &kp G  &kp M  &lt NUM N    HRMR(E,     I,    O)
    &lt FUNC Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA  &kp DOT    &lt ARROW FSLH
          &lt ARROW TAB   &kp SPACE   &kp BSPC  &ht RWIN ENTER
