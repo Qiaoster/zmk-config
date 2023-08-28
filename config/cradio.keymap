@@ -38,6 +38,14 @@
 				= <&bt BT_SEL 0 &to DESKTOP>;
 		};
 		
+		to_desktop2: to_desktop2 {
+			label = "ZM_to_desktop";
+			compatible = "zmk,behavior-macro";
+			#binding-cells=<0>;
+			bindings
+				= <&bt BT_SEL 3 &to DESKTOP>;
+		};
+		
 		to_laptop_1: to_laptop_1 {
 			label = "ZM_to_laptop_1";
 			compatible = "zmk,behavior-macro";
@@ -130,7 +138,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-            &trans     &trans     &trans     &trans      &trans         &to_desktop     &kp PG_UP     &kp UP     &kp PG_DN      &trans
+            &trans     &trans     &trans     &trans      &to_desktop2         &to_desktop     &kp PG_UP     &kp UP     &kp PG_DN      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
              &trans     &trans     &trans     &trans     &to_laptop_2  &to_laptop_1     &kp LEFT     &kp DOWN     &kp RIGHT    &trans
