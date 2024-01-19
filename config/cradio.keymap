@@ -9,13 +9,11 @@
 #define HRML(k1,k2,k3) &ht LALT k1  &ht LCTRL k2  &ht LSHFT k3
 #define HRMR(k1,k2,k3) &ht RSHFT k1  &ht RCTRL k2  &ht LALT k3
 
-#define DESKTOP 0
-#define LAPTOP 1
-#define NUM 2
-#define SYM 3
-#define FUNC 4
-#define ARROW 5
-#define QWERTY_SYM 6
+#define MAIN 0
+#define NUM 1
+#define SYM 2
+#define FUNC 3
+#define ARROW 4
 
 / {
     behaviors {
@@ -29,52 +27,9 @@
         };
     };
 	
-	macros {
-		to_desktop: to_desktop {
-			label = "ZM_to_desktop";
-			compatible = "zmk,behavior-macro";
-			#binding-cells=<0>;
-			bindings
-				= <&bt BT_SEL 0 &to DESKTOP>;
-		};
-		
-		to_desktop2: to_desktop2 {
-			label = "ZM_to_desktop";
-			compatible = "zmk,behavior-macro";
-			#binding-cells=<0>;
-			bindings
-				= <&bt BT_SEL 3 &to DESKTOP>;
-		};
-		
-		to_laptop_1: to_laptop_1 {
-			label = "ZM_to_laptop_1";
-			compatible = "zmk,behavior-macro";
-			#binding-cells=<0>;
-			bindings
-				= <&bt BT_SEL 1 &to LAPTOP>;
-		};
-		
-		to_laptop_2: to_laptop_2 {
-			label = "ZM_to_laptop_2";
-			compatible = "zmk,behavior-macro";
-			#binding-cells=<0>;
-			bindings
-				= <&bt BT_SEL 2 &to LAPTOP>;
-		};
-	};
-	
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-    bindings = <
-   &ht RWIN Q &kp W  &kp F  &kp P  &kp B  &kp J  &kp L  &kp U  &kp Y &ht CAPSLOCK ESC
-   HRML(A,    R,     S) &lt SYM T    &kp G  &kp M  &lt NUM N    HRMR(E,     I,    O)
-   &lt FUNC Z  &kp X  &kp C  &kp D  &kp V  &kp K  &kp H  &kp COMMA  &kp DOT    &lt ARROW FSLH
-         &lt ARROW TAB   &kp SPACE   &kp BSPC  &ht RWIN ENTER
-    >;
-    };
-
-    laptop_layer {
     bindings = <
    &ht RWIN Q   &kp W  &kp E &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O &ht CAPSLOCK ESC
    HRML(A,    S,     D) &lt QWERTY_SYM F    &kp G  &kp H  &lt NUM J    HRMR(K,     L,    SEMI)
@@ -138,33 +93,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-            &trans     &trans     &trans     &trans      &to_desktop2         &to_desktop     &kp PG_UP     &kp UP     &kp PG_DN      &trans
+            &trans     &trans     &trans     &trans      &bt BT_SEL 3         &bt BT_SEL 0     &kp PG_UP     &kp UP     &kp PG_DN      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-             &trans     &trans     &trans     &trans     &to_laptop_2  &to_laptop_1     &kp LEFT     &kp DOWN     &kp RIGHT    &trans
+             &trans     &trans     &trans     &trans     &bt BT_SEL 2  &bt BT_SEL 1     &kp LEFT     &kp DOWN     &kp RIGHT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &trans       &trans         &kp DEL     &kp K_VOL_DN     &kp K_PP     &kp K_VOL_UP    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &bt BT_CLR         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-
-        qsym_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &trans   &trans   &trans   &trans         &kp GRAVE  &kp LBKT   &kp RBKT   &kp MINUS   &kp BSLH
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &trans   &trans     &trans   &trans   &trans      &trans  &kp LPAR  &kp RPAR  &kp P   &kp APOS
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &trans   &kp EQUAL  &trans   &trans   &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
