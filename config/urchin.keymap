@@ -22,8 +22,8 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <175>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            //quick-tap-ms = <150>; // second tap of double tap (of a hold_tap key) always result in tap
+            //require-prior-idle-ms = <100>; // quick tap but of all keys
             bindings = <&kp>, <&kp>;
         };
 	};
