@@ -50,7 +50,7 @@ keymap {
         sym_layer {
             bindings = <
                 &trans &trans &trans &trans &trans      &kp GRAVE &kp LBKT  &kp RBKT &kp MINUS &kp BSLH
-                &trans &trans &trans &trans &trans      &trans    &kp LPAR  &kp RPAR &kp     P &kp APOS
+                &trans &trans &trans &trans &trans      &trans    &kp KP_LPAR  &kp KP_RPAR &kp     P &kp APOS
                 &trans &trans &trans &trans &trans      &trans    &kp EQUAL &trans   &trans    &trans
                                      &trans &trans      &trans    &trans
                 >;
