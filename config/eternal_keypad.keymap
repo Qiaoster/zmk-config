@@ -26,9 +26,9 @@
     default_layer {
       bindings = <
                     &kp ESC   &kp N1    &kp N2   &kp N3    &kp N4    &kp N5  &kp N6
-                    &kp LCTRL &kp Q     &kp W    &kp E     &kp S     &kp F   &kp N7
+                    &kp LCTRL &kp Q     &kp W    &kp K     &kp S     &kp F   &kp N7
         &kp F13     &kp LSHFT &kp A     &kp D    &kp V     &kp E     &kp G   &kp N8
-        &kp F14     &kp LALT &kp Z     &kp X    &kp C     &kp D     &kp T   &kp N9
+        &kp F14     &kp LALT &kp Z     &kp X    &kp C     &kp R     &kp T   &kp N9
         &kp F15     &kp LWIN &kp TAB  &kp ENTER           &kp SPACE         &lt ARROW ESC
       >;
     };
