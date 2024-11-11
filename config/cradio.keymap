@@ -31,8 +31,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            //key-positions <0 4 10 14 20 24>;
-            key-positions <0 1 2>;
+            key-positions = <0 4 10 14 20 24>;
             bindings = <&bt BT_CLR>;
             };
         };
