@@ -27,7 +27,7 @@
             bindings = <&kp>, <&kp>;
         };
         lt {
-            flavor = "balanced"
+            flavor = "balanced";
         };
         combos {
         compatible = "zmk,combos";
