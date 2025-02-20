@@ -26,6 +26,9 @@
             //require-prior-idle-ms = <100>; // quick tap but of all keys
             bindings = <&kp>, <&kp>;
         };
+        &lt {
+            flavor = "balanced"
+        };
         combos {
         compatible = "zmk,combos";
         combo_esc {
