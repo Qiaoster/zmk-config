@@ -17,7 +17,7 @@
 &sk {
     ignore-modifiers;
 
-}
+};
 
 / {
 	behaviors {
